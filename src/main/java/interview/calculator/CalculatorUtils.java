@@ -29,8 +29,6 @@ public class CalculatorUtils {
         String[] characters = input.split(" ");
 
         for (String strCharacter: characters) {
-            System.out.println(stack);
-
             char character = strCharacter.charAt(0);
             if (isDigit(strCharacter)) {
                 stack.push(Double.parseDouble(strCharacter));
@@ -40,7 +38,6 @@ public class CalculatorUtils {
             } else {
                 throw new CharacterNotSupportedException(strCharacter);
             }
-
         }
 
         return stack.pop();
